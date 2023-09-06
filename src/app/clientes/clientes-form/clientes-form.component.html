@@ -1,1 +1,29 @@
-<p>clientes-form works!</p>
+<div class="container">
+    <h2>Crear cliente</h2>
+    <form>
+        <div class="form-row">
+            <div class="col-md-4">
+                <label>DNI</label>
+                <input type="number" name="clienteDNI" class="form-control"
+                [(ngModel)]="cliente.dni">
+            </div>
+            <div class="col-md-4">
+                <label>Nombre</label>
+                <input type="text" name="clienteDNI" class="form-control"
+                [(ngModel)]="cliente.nombre">
+            </div>
+            <div class="col-md-4">
+                <label>Direccion</label>
+                <input type="text" name="clienteDNI" class="form-control"
+                [(ngModel)]="cliente.direccion">
+            </div>
+            <div class="col-md-4">
+                <label>Telefono</label>
+                <input type="text" name="clienteDNI" class="form-control"
+                [(ngModel)]="cliente.telefono">
+            </div>
+        </div>
+        <button class="btn btn-outline-primary" (click)="save()">Guardar</button>
+        <a class="btn btn-outline-primary" [routerLink]="['/clientes-list']">Atras</a>
+    </form>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
 
@@ -9,15 +10,20 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClientesFormComponent implements OnInit {
 
-  public cliente: Cliente | undefined;
+  public cliente: Cliente = new Cliente(0,0,'','','');
 
-  constructor(public clienteService: ClienteService) { }
+  constructor(public clienteService: ClienteService, private router:Router) {
+   }
 
   ngOnInit(): void {
   }
 
   public save(){
-    
+    this.clienteService.save(this.cliente).subscribe(data => {
+      this.router.navigate(['/clientes-list']);
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

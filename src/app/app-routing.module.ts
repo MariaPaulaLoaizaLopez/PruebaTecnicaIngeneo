@@ -6,9 +6,11 @@ import { MediosDeTransporteListComponent } from './mediosDeTransporte/medios-de-
 import { PedidosListComponent } from './pedidos/pedidos-list/pedidos-list.component';
 import { PlanDeEntregaListComponent } from './planDeEntrega/plan-de-entrega-list/plan-de-entrega-list.component';
 import { ProductosListComponent } from './productos/productos-list/productos-list.component';
+import { ClientesFormComponent } from './clientes/clientes-form/clientes-form.component';
 
 const routes: Routes = [
   {path: 'clientes-list', component: ClientesListComponent },
+  {path: 'clientes-form', component: ClientesFormComponent },
   {path: 'almacenamientos-list', component: AlmacenamientosListComponent },
   {path: 'transporte-list', component: MediosDeTransporteListComponent },
   {path: 'pedidos-list', component: PedidosListComponent },

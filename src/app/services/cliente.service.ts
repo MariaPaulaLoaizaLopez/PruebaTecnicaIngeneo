@@ -16,8 +16,20 @@ export class ClienteService {
     return this.http.get(this.baseUrl);
   }
 
+  public getById(id:number):Observable<any>{
+    return this.http.get(this.baseUrl + id);
+  }
+
   public save(cliente: Cliente):Observable<any>{
     return this.http.post(this.baseUrl,cliente);
+  }
+
+  public edit(cliente: Cliente):Observable<any>{
+    return this.http.put(this.baseUrl + cliente.id,cliente);
+  }
+
+  public delete(id:number):Observable<any>{
+    return this.http.delete(this.baseUrl + id);
   }
 }
 
