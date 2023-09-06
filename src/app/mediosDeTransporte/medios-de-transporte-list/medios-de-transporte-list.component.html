@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Transporte</h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Fecha de ingreso</td>
+            <td>Estado</td>
+            <td>Matricula</td>
+        </tr>
+        <tr *ngFor="let medio of mediosDeTransporte">
+            <td>{{medio.fechaDeIngreso}}</td>
+            <td>{{medio.estado}}</td>
+            <td>{{medio.matriculaTransporte}}</td>
+        </tr>
+    </table>
+</div>

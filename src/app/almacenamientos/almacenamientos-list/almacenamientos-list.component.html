@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Almacenamientos</h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Razon Social</td>
+            <td>Representante</td>
+            <td>Direccion</td>
+            <td>Pais</td>
+        </tr>
+        <tr *ngFor="let almacenamiento of almacenamientos">
+            <td>{{almacenamiento.razonSocial}}</td>
+            <td>{{almacenamiento.representante}}</td>
+            <td>{{almacenamiento.direccion}}</td>
+            <td>{{almacenamiento.pais}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Plan de entrega</h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Pedido</td>
+            <td>Fecha de registro</td>
+            <td>Fecha de entrega</td>
+            <td>Lugar de entrega</td>
+            <td>Precio de envio</td>
+            <td>Medio de transporte</td>
+            <td>Numero de guia</td>
+            <td>Cliente</td>
+
+        </tr>
+        <tr *ngFor="let plan of planesDeEntrega">
+            <td>{{plan.idPedido}}</td>
+            <td>{{plan.fechaDeRegistro}}</td>
+            <td>{{plan.fechaDeEntrega}}</td>
+            <td>{{plan.idLugarEntrega}}</td>
+            <td>{{plan.precioDeEnvio}}</td>
+            <td>{{plan.numeroDeGuia}}</td>
+            <td>{{plan.idCliente}}</td>
+        </tr>
+    </table>
+</div>
